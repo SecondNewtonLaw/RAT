@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace RAT.APIs;
-public partial class IpJson
+public class IpJson
 {
     [JsonPropertyName("status")]
     public string? Status { get; set; }
