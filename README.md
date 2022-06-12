@@ -16,7 +16,7 @@ This is a Discord RAT that I wrote as a challenge, it's __NOT__ meant on ANYWAY 
 ### Planned
 
 - (1) Auto Updater
-- (0) Multi-Victim System
+- (0) Multi-Victim System (WIP)
 - (1) IP Grabbing
 - (2) File Uploader
 - (2) File Downloader
