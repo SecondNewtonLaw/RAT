@@ -1,5 +1,8 @@
 using System.Net.Http;
 
+/// <summary>
+/// A class that contains objects that should ONLY have ONE instance on memory.
+/// </summary>
 public static class SingleInstance
 {
     /// <summary>

