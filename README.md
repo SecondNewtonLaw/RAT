@@ -6,6 +6,9 @@ This is a Discord RAT that I wrote as a challenge, it's __NOT__ meant on ANYWAY 
 
 - Ping
 - Rebuild Slash Commands Remotely.
+- IP Grabbing
+- Multi-Victim System (WIP->Baked in (Sort Of))
+- Shell
 
 ## Priority
 
@@ -16,11 +19,8 @@ This is a Discord RAT that I wrote as a challenge, it's __NOT__ meant on ANYWAY 
 ### Planned
 
 - (1) Auto Updater
-- (0) Multi-Victim System (WIP->Baked in (Sort Of))
-- (1) IP Grabbing
 - (2) File Uploader
 - (2) File Downloader
-- (0) Shell
 - (2) Privilage Escalation (Windows Only)
 - (2) Linux + Windows Support (Yes, I'm using Linux to test this no joke)
 
