@@ -9,6 +9,7 @@ This is a Discord RAT that I wrote as a challenge, it's __NOT__ meant on ANYWAY 
 - IP Grabbing
 - Multi-Victim System (WIP->Baked in (Sort Of))
 - Shell
+- Build commands via prefix -> `!bcmd`
 
 ## Priority
 
@@ -24,4 +25,12 @@ This is a Discord RAT that I wrote as a challenge, it's __NOT__ meant on ANYWAY 
 - (2) Privilage Escalation (Windows Only)
 - (2) Linux + Windows Support (Yes, I'm using Linux to test this no joke)
 
+#### FAQ
+
+- Slash Commands not showing up?
+
+    -> type `!bcmd` to build commands for the current guild __ONLY__.
+
 For obvious reasons, this project was not written with the intent to harm anyone.
+
+Written by _`F = m * a`_
